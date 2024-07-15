@@ -1,0 +1,11 @@
+option_settings:
+  aws:elasticbeanstalk:command:
+    DeploymentPolicy: Rolling
+    IgnoreHealthCheck: true
+  aws:elasticbeanstalk:environment:
+    EnvironmentType: LoadBalanced
+    LoadBalancerType: application
+    ServiceRole: ecsServiceRole
+  aws:ecs:taskdef:
+    Cluster: RootsShivasou
+    TaskDefinitionName: modulecommun:15

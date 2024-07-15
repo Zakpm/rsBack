@@ -1,0 +1,51 @@
+{
+    "configurations": [
+
+        {
+            "type": "java",
+            "name": "Spring Boot-ModuleCommunApplication<moduleCommun>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.rootsshivasou.moduleCommun.ModuleCommunApplication",
+            "projectName": "moduleCommun",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": "-Dspring.profiles.active=dev"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-CreationApplication<creation>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.rootsshivasou.creation.CreationApplication",
+            "projectName": "creation",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=55638 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=creation -Dspring.profiles.active=dev"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ContactApplication<contact>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.rootsshivasou.contact.ContactApplication",
+            "projectName": "contact",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": "-Dspring.profiles.active=dev"
+
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-SecurityApplication<security>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.rootsshivasou.security.SecurityApplication",
+            "projectName": "security",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": "-Dspring.profiles.active=dev"
+        }
+        
+    ]
+}

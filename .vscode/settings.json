@@ -1,0 +1,6 @@
+{
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "java.project.sourcePaths": ["src/main/java", "src/test/java"],
+    "java.project.classPaths": ["target/classes", "target/test-classes"]
+    
+}
