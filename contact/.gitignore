@@ -35,3 +35,6 @@ build/
 ### application-prod ###
 src/main/resources/application.properties
 src/main/resources/application-prod.properties
+
+## mail config de contact
+src/main/java/com/rootsshivasou/contact/config/MailConfig.java
