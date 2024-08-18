@@ -13,6 +13,7 @@ public class AppointmentDTO {
     private LocalDateTime date;
     private Boolean isValidated;
     private Integer userId;
+    private String message;
 
     public AppointmentDTO () {
 
@@ -22,6 +23,7 @@ public class AppointmentDTO {
         this.id = a.getId();
         this.date = a.getDate();
         this.isValidated = a.getIsValidated();
+        this.message = a.getMessage();
         if (a.getUser() != null) {
             this.userId = a.getUser().getId();
         }

@@ -59,7 +59,8 @@ public class AppointmentController {
         logger.info("Received appointment creation request: {}", appointmentDTO);
         try {
             LocalDateTime dateTime = appointmentDTO.getDate();
-            Appointment appointment = service.createAppointment(appointmentDTO.getUserId(), dateTime);
+            String message = appointmentDTO.getMessage();
+            Appointment appointment = service.createAppointment(appointmentDTO.getUserId(), dateTime, message);
             AppointmentDTO responseDTO = new AppointmentDTO(appointment);
             logger.info("Appointment created successfully: {}", responseDTO);
             return new ResponseEntity<>(responseDTO, HttpStatus.CREATED);

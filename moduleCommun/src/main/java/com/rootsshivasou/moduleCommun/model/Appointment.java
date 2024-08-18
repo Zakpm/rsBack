@@ -26,8 +26,12 @@ public class Appointment {
     @Column(nullable = false, columnDefinition = "BOOLEAN DEFAULT false")
     private Boolean isValidated = false;
 
+    @Column(nullable = false)
+    private String message;
+
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
     @ToString.Exclude
     private User user;
+
 }
