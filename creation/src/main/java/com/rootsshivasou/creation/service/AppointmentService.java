@@ -57,4 +57,23 @@ public class AppointmentService {
 
     public Appointment validateAppointment(int appointmentId) {
         Appointment appointment = appointmentRepository.findById(appointmentId)
-                .orElseT
+                .orElseThrow(() -> new RuntimeException("Appointment not found"));
+        
+        appointment.setIsValidated(true);
+        Appointment savedAppointment = appointmentRepository.save(appointment);
+        
+        // Récupération de l'email de l'utilisateur
+        String userEmail = appointment.getUser().getEmail();
+        String subject = "Confirmation de rendez-vous";
+        String content = "Votre rendez-vous a été confirmé.";
+        
+        
+        // Envoi de l'email
+        emailService.sendEmail(userEmail, subject, content);
+        
+        logger.info("Appointment validated and confirmation email sent to: {}", userEmail);
+        
+        return savedAppointment;
+    }
+    
+}
